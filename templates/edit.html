@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% block css_include %}
+  <link rel="stylesheet" href="js/medium-editor-master//dist/css/medium-editor.css">
+  <link rel="stylesheet" href="js/medium-editor-master/dist/css/themes/default.css">
+{% endblock %}
+{% block scripts %}
+  <script src="js/medium-editor-master/dist/js/medium-editor.js"></script>
+  <script>
+    var editor = new MediumEditor('.editable');
+    editor.subscribe('editableInput', function (event, editable) {
+      var data = document.querySelector('#content');
+      var request = new XMLHttpRequest();
+      request.open('POST', '/post/save', true);
+      request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+      request.send(data.innerHTML);
+    });
+  </script>
+{% endblock %}
