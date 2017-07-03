@@ -1,0 +1,51 @@
+{% extends "index.html" %}
+{% block css_include %}
+  <link rel="stylesheet" href="js/medium-editor-master//dist/css/medium-editor.css">
+  <link rel="stylesheet" href="js/medium-editor-master/dist/css/themes/default.css">
+{% endblock %}
+{% block scripts %}
+  <script src="js/medium-editor-master/dist/js/medium-editor.js"></script>
+  <script>
+var domReady = function(callback) {
+    document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
+};
+domReady(function() {
+    var editor = new MediumEditor('.editable', {
+      toolbar: {
+        /* These are the default options for the toolbar,
+           if nothing is passed this is what is used */
+        allowMultiParagraphSelection: true,
+        buttons: ['bold', 'italic', 'underline', 'anchor', 'h2', 'h3', 'quote'],
+        diffLeft: 0,
+        diffTop: -10,
+        firstButtonClass: 'medium-editor-button-first',
+        lastButtonClass: 'medium-editor-button-last',
+        relativeContainer: null,
+        standardizeSelectionStart: false,
+        static: false,
+        /* options which only apply when static is true */
+        align: 'center',
+        sticky: false,
+        updateOnEmptySelection: false
+      }
+    }); 
+    var postElement = document.getElementsByTagName('body');
+    var saveButtons = document.querySelectorAll('.bntSave');
+    saveButtons.forEach(function(btn, idx) { 
+      editor.on(btn, 'click', function (e) { 
+        console.log(editor.elements);
+        var data = editor.getContent(idx);
+        var request = new XMLHttpRequest();
+        var retJson = {};
+        retJson.data = data;
+        retJson.id = editor.elements[idx].id;
+        console.log(JSON.stringify(retJson));
+        request.open('POST', '/post/save', true);
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.send(JSON.stringify(retJson));
+	window.location.reload();
+      });
+    });
+});
+  </script>
+{% endblock %}
