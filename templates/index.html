@@ -1,24 +1,22 @@
 {% extends "layout.html" %}	
 {% block body %}
-<div id="content">
-	<h1> Tour Details </h1>
-	Tour de France 2017
-	<div>
-		<div>
-			<img src="img/colnago.png">
-			<img src="img/canyon.png">
-			<img src="img/bike_decades.png">
-		</div>
-		<div>
-			<h2>erste Etappe: Düsseldorf - Düsseldorf</h2>
-			<h3>Düsseldorf 2017 / Berlin 1987</h3>
-		</div>
-  <div id="content" class="editable"></div>
-		<div class="editable">Das amüsanteste an der Team Präsentation war wohl, als Jens Voigt bereits von zwei Fahrern darauf aufmerksam gemacht wurde das sie nicht Arno Demare sind, dann den Dritten interview und dieser immer noch der war den er eigentlich sprechen wollte.</p>
-			Links sieht man zum einen das Fahrrad mit dem Jelle Neijdam 1987 in Berlin den Prolog gewann und das Fahrrad mit dem Toni Martin morgen gewinnen möchte. Dreisig Jahre liegen dazwischen.
-			<h4>ein Tip</h4>
-			Stephan Küng - BMC (CH)		
-			</div>
+
+{% if edit %}
+<div id="stage{{ posts|length + 1 }}" class="editable"></div>
+<button id="{{ posts|length + 1 }}" class="bntSave" type="button">speichern</button>
+{% endif %}
+{% for post in posts %}
+<div class="images">
+	<img src="img/{{ post.id }}/1.png">
+	<img src="img/{{ post.id }}/2.png">
+	<img src="img/{{ post.id }}/3.png">
+</div>	
+	<div id="{{ post.id  }}" class="editable">
+		{{ post.data | safe }}
 	</div>
-</div>
+	<hr>
+{% if edit %}
+<button id="{{ post.id }}"class="bntSave" type="button">speichern</button>
+{% endif %}
+{% endfor %}
 {% endblock %}
