@@ -1,9 +1,13 @@
 <!doctype html>
  <meta name="csrf_token" value="a01u9sZsduaks833">
- <link rel=stylesheet type=text/css href="css/main.css?899999999998">
-
+ <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+ <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='js/comments/main.css') }}">
 {% block css_include %}{% endblock %}
-<h1>Tour Details</h1>
-<h2>Tour de France 2017</h2>
-{% block body %}{% endblock %}
+<section class="tourapp">
+<section class="cheader">
+    <h1>Tour Details - Tour de France 2017</h1>
+</section>
+
+    {% block body %}{% endblock %}
+</section>
 {% block scripts %}{% endblock %}

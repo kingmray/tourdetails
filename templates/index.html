@@ -14,9 +14,12 @@
 	<div id="{{ post.id  }}" class="editable">
 		{{ post.data | safe }}
 	</div>
-	<hr>
+    {% include "comments.html" %}
 {% if edit %}
 <button id="{{ post.id }}"class="bntSave" type="button">speichern</button>
 {% endif %}
 {% endfor %}
+{% endblock %}
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/comments/dist/bundle.js') }}"></script>
 {% endblock %}
