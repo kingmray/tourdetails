@@ -12,6 +12,7 @@ __pycache__/
 build/
 develop-eggs/
 dist/
+!./static/js/comments/dist/bundle.js
 downloads/
 eggs/
 .eggs/
