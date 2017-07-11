@@ -7,7 +7,7 @@
 	width: 40px;
 	height: 40px;
 	margin: auto 0;
-	font-size: 12px;
+	font-size: 18px;
 	color: #cc9a9a;
 	margin-bottom: 11px;
 	transition: color 0.2s ease-out;
@@ -39,7 +39,7 @@
 
 .comment-list li {
 	position: relative;
-	font-size: 12px;
+	font-size: 18px;
 	border-bottom: 1px solid #ededed;
 }
 
