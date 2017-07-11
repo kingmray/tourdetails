@@ -1,5 +1,7 @@
 # Byte-compiled / optimized / DLL files
+.idea/
 static/js/comments/node_modules/
+tourdetailsapp/static/js/comments/node_modules/
 __pycache__/
 *.py[cod]
 *$py.class

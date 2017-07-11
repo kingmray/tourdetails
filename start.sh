@@ -1,4 +1,4 @@
 #!/bin/bash
-export FLASK_APP=tour.py
+export FLASK_APP=tourdetailsapp
 export FLASK_DEBUG=1
-flask run
+(cd tourdetailsapp && flask run)
