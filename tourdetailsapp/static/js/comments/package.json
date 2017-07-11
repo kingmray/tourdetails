@@ -1,0 +1,16 @@
+{
+  "name": "comments",
+  "version": "1.0.0",
+  "description": "add todo like comments for blog",
+  "scripts": {
+    "compile": "java -jar node_modules/google-closure-compiler/compiler.jar -O ADVANCED --language_in=ES6_STRICT --new_type_inf --js_output_file='dist/bundle.js' 'src/**.js' -W VERBOSE",
+    "prepublish": "npm run compile"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "google-closure-compiler": "^20160315.2.0"
+  }
+}

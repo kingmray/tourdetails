@@ -1,0 +1,17 @@
+--2017-07-11 17:01:02--  https://www.google.com/webmasters/verification/verification-file-dl?hl=de
+CA-Zertifikat »/etc/ssl/certs/ca-certificates.crt« wurde geladen
+Auflösen des Hostnamens www.google.com… 2a00:1450:4005:80a::2004, 216.58.213.228
+Verbindungsaufbau zu www.google.com|2a00:1450:4005:80a::2004|:443 … verbunden.
+HTTP-Anforderung gesendet, auf Antwort wird gewartet … 302 Moved Temporarily
+Platz: https://accounts.google.com/ServiceLogin?service=sitemaps&passive=1209600&continue=https://www.google.com/webmasters/verification/verification-file-dl?hl%3Dde&followup=https://www.google.com/webmasters/verification/verification-file-dl?hl%3Dde&hl=de [folgend]
+--2017-07-11 17:01:02--  https://accounts.google.com/ServiceLogin?service=sitemaps&passive=1209600&continue=https://www.google.com/webmasters/verification/verification-file-dl?hl%3Dde&followup=https://www.google.com/webmasters/verification/verification-file-dl?hl%3Dde&hl=de
+Auflösen des Hostnamens accounts.google.com… 2a00:1450:4001:819::200d, 172.217.17.237
+Verbindungsaufbau zu accounts.google.com|2a00:1450:4001:819::200d|:443 … verbunden.
+HTTP-Anforderung gesendet, auf Antwort wird gewartet … 200 OK
+Länge: nicht spezifiziert [text/html]
+Wird in »verification-file-dl?hl=de« gespeichert.
+
+verification-file-dl?hl=de             [<=>                                                              ]       0  --.-KB/s               verification-file-dl?hl=de             [ <=>                                                             ]  55,44K  --.-KB/s    in 0,06s   
+
+2017-07-11 17:01:03 (949 KB/s) - »verification-file-dl?hl=de« gespeichert [56774]
+
