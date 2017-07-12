@@ -14,8 +14,8 @@ __pycache__/
 build/
 develop-eggs/
 dist/
-!./static/js/comments/dist/bundle.js
-!./static/js/medium-editor-master/dist
+!./tourdetailsapp/static/js/comments/dist/bundle.js
+!./tourdetailsapp/static/js/medium-editor-master/dist
 downloads/
 eggs/
 .eggs/
