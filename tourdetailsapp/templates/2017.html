@@ -18,45 +18,10 @@
             <button id="{{ post.id }}" class="bntSave" type="button">speichern</button>
         {% endif %}
     {% endfor %}
-    <script id="youtube" type="text/template">
-        <iframe width="560" height="315" src="%url%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </script>
 {% endblock %}
 {% block scripts %}
     <script src="{{ url_for('static', filename='js/comments/dist/bundle.js') }}"></script>
-
-{% endblock %}
-{% block scripts2 %}
-        <script>
-    var domReady = function(callback) {
-    document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
-};
-domReady(function() {
-    // Cache of the template
-    var template = document.getElementById("youtube");
-    // Get the contents of the template
-    var templateHtml = template.innerHTML;
-
-
-    var entries = document.querySelectorAll('div.editable:not(.medium-editor-element)');
-    for (var i = 0; i < entries.length; i++) {
-        var re = /#youtube_[^<^&^\s\\]+/i;
-        var found = entries[i].innerHTML.match(re);
-        if (found) {
-
-            console.log('ray');
-            console.log(found[0]);
-            url = found[0].split('_')[1];
-            console.log(url);
-            entries[i].innerHTML = entries[i].innerHTML.replace(re, templateHtml.replace(
-                /%url%/g, 'https://www.youtube.com/embed/' + url
-            ));
-        }
-
-    }
-});
-
-
+    <script>
         // Load the IFrame Player API code asynchronously.
         var tag = document.createElement('script');
         tag.src = "https://www.youtube.com/player_api";

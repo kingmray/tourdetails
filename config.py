@@ -1,1 +1,1 @@
-DB = './db.json'
+DB = '../db2018.json'
