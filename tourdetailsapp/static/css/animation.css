@@ -1,9 +1,9 @@
 .wrapper {
-    padding-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
+    background-color: white;
 }
          .animated {
              grid-row: 1;
@@ -11,8 +11,7 @@
              background-size: 100px;
             background-repeat: no-repeat;
             background-position: left top;
-            padding-top:100px;
-            margin-bottom:60px;
+            padding-top: 80px;
             -webkit-animation-duration: 3s;
             animation-duration: 3s;
             -webkit-animation-fill-mode: both;

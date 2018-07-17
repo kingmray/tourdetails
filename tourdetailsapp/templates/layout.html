@@ -1,4 +1,5 @@
 <!doctype html>
+<header>
  <meta name=viewport content='width=700'>
  <meta name="csrf_token" value="a01u9sZsduaks833">
  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
@@ -7,13 +8,13 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='js/comments/main.css') }}">
 
 {% block css_include %}{% endblock %}
+</header>
+<body>
 <section class="tourapp">
 <div class="space"></div>
 <section class="cheader">
     <h1>Tour Details - Tour de France 2018</h1>
-</section>
-<div class="wrapper">
-
+    <div class="wrapper">
             <div id="animated-example" class="animated jakob fadeInLeft"></div>
             <div id="animated-example2" class="animated chris fadeInLeft2"></div>
             <div id="animated-example3" class="animated adam fadeInLeft3"></div>
@@ -21,8 +22,12 @@
 
         </div>
 
+</section>
+
+
     {% block body %}{% endblock %}
 </section>
+
 {% block scripts %}{% endblock %}
 {% block scripts2 %}{% endblock %}
-
+</body>
