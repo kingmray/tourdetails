@@ -1,0 +1,113 @@
+<html>
+   <head>
+
+      <style>
+          .wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+         .animated {
+             grid-row: 1;
+             width: 100px;
+            background-image: url('../img/default/Vincenzo_Nibali.PNG');
+             background-size: 100px;
+            background-repeat: no-repeat;
+            background-position: left top;
+            padding-top:100px;
+            margin-bottom:60px;
+            -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+             text-align: left;
+         }
+
+         .animated2 {
+             grid-row: 1;
+             width: 100px;
+                          background-size: 100px;
+            background-image: url('../img/default/Jakob_Fuglsang.PNG');
+            background-repeat: no-repeat;
+            background-position: left top;
+            padding-top:100px;
+            margin-bottom:60px;
+            -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+         }
+
+         @-webkit-keyframes fadeInLeft {
+            0% {
+               opacity: 0;
+               -webkit-transform: translateX(-320px);
+            }
+            100% {
+               opacity: 1;
+               -webkit-transform: translateX(520px);
+            }
+         }
+
+         @keyframes fadeInLeft {
+            0% {
+               opacity: 0;
+               transform: translateX(-320px);
+            }
+            100% {
+               opacity: 1;
+               transform: translateX(520px);
+            }
+         }
+
+         @-webkit-keyframes fadeInLeft2 {
+            0% {
+               opacity: 0;
+               -webkit-transform: translateX(-320px);
+            }
+            100% {
+               opacity: 1;
+               -webkit-transform: translateX(500px);
+            }
+         }
+
+         @keyframes fadeInLeft2 {
+            0% {
+               opacity: 0;
+               transform: translateX(-620px);
+            }
+            100% {
+               opacity: 1;
+               transform: translateX(0px);
+            }
+         }
+
+         .fadeInLeft {
+         -webkit-animation-name: fadeInLeft;
+         animation-name: fadeInLeft;
+         }
+
+         .fadeInLeft2 {
+         -webkit-animation-name: fadeInLeft2;
+         animation-name: fadeInLeft2;
+         }
+         animation-name: fadeInDown;
+      </style>
+
+   </head>
+   <body>
+    <div class="wrapper">
+      <div id="animated-example" class="animated fadeInLeft"></div>
+      <div id="animated-example2" class="animated2 fadeInLeft2"></div>
+    </div>
+      <button onclick="myFunction()">Reload page</button>
+
+      <script>
+         function myFunction() {
+            location.reload();
+         }
+      </script>
+
+   </body>
+</html>

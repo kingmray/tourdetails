@@ -19,7 +19,8 @@
         {% endif %}
     {% endfor %}
     <script id="youtube" type="text/template">
-        <iframe width="560" height="315" src="%url%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="%url%" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
     </script>
 {% endblock %}
 {% block scripts %}
@@ -27,34 +28,34 @@
 
 {% endblock %}
 {% block scripts2 %}
-        <script>
-    var domReady = function(callback) {
-    document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
-};
-domReady(function() {
-    // Cache of the template
-    var template = document.getElementById("youtube");
-    // Get the contents of the template
-    var templateHtml = template.innerHTML;
+    <script>
+        var domReady = function (callback) {
+            document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
+        };
+        domReady(function () {
+            // Cache of the template
+            var template = document.getElementById("youtube");
+            // Get the contents of the template
+            var templateHtml = template.innerHTML;
 
 
-    var entries = document.querySelectorAll('div.editable:not(.medium-editor-element)');
-    for (var i = 0; i < entries.length; i++) {
-        var re = /#youtube_[^<^&^\s\\]+/i;
-        var found = entries[i].innerHTML.match(re);
-        if (found) {
+            var entries = document.querySelectorAll('div.editable:not(.medium-editor-element)');
+            for (var i = 0; i < entries.length; i++) {
+                var re = /#youtube_[^<^&^\s\\]+/i;
+                var found = entries[i].innerHTML.match(re);
+                if (found) {
 
-            console.log('ray');
-            console.log(found[0]);
-            url = found[0].split('_')[1];
-            console.log(url);
-            entries[i].innerHTML = entries[i].innerHTML.replace(re, templateHtml.replace(
-                /%url%/g, 'https://www.youtube.com/embed/' + url
-            ));
-        }
+                    console.log('ray');
+                    console.log(found[0]);
+                    url = found[0].split('_')[1];
+                    console.log(url);
+                    entries[i].innerHTML = entries[i].innerHTML.replace(re, templateHtml.replace(
+                        /%url%/g, 'https://www.youtube.com/embed/' + url
+                    ));
+                }
 
-    }
-});
+            }
+        });
 
 
         // Load the IFrame Player API code asynchronously.
@@ -66,6 +67,7 @@ domReady(function() {
         // Replace the 'ytplayer' element with an <iframe> and
         // YouTube player after the API code downloads.
         var player;
+
         function onYouTubePlayerAPIReady() {
             player = new YT.Player('ytplayer', {
                 height: '360',

@@ -1,0 +1,146 @@
+.wrapper {
+    padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+         .animated {
+             grid-row: 1;
+             width: 100px;
+             background-size: 100px;
+            background-repeat: no-repeat;
+            background-position: left top;
+            padding-top:100px;
+            margin-bottom:60px;
+            -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+             text-align: left;
+         }
+
+         .vincenzo {
+             background-image: url(/img/default/Vincenzo_Nibali.PNG);
+         }
+
+         .jakob {
+             background-image: url(/img/default/Jakob_Fuglsang.PNG);
+         }
+
+         .chris {
+             background-image: url(/img/default/Chris_Froome.PNG);
+         }
+
+         .adam {
+             background-image: url(/img/default/Adam_Yates.PNG);
+         }
+
+
+         @-webkit-keyframes fadeInLeft {
+            0% {
+               opacity: 0;
+               -webkit-transform: translateX(-320px);
+            }
+            100% {
+               opacity: 1;
+               -webkit-transform: translateX(520px);
+            }
+         }
+
+         @keyframes fadeInLeft {
+            0% {
+               opacity: 0;
+               transform: translateX(-320px);
+            }
+            100% {
+               opacity: 1;
+               transform: translateX(520px);
+            }
+         }
+
+         @-webkit-keyframes fadeInLeft2 {
+            0% {
+               opacity: 0;
+               -webkit-transform: translateX(-620px);
+            }
+            100% {
+               opacity: 1;
+               -webkit-transform: translateX(100px);
+            }
+         }
+
+         @keyframes fadeInLeft2 {
+            0% {
+               opacity: 0;
+               transform: translateX(-620px);
+            }
+            100% {
+               opacity: 1;
+               transform: translateX(100px);
+            }
+         }
+
+         @-webkit-keyframes fadeInLeft3 {
+            0% {
+               opacity: 0;
+               -webkit-transform: translateX(-620px);
+            }
+            100% {
+               opacity: 1;
+               -webkit-transform: translateX(0px);
+            }
+         }
+
+         @keyframes fadeInLeft3 {
+            0% {
+               opacity: 0;
+               transform: translateX(-620px);
+            }
+            100% {
+               opacity: 1;
+               transform: translateX(0px);
+            }
+         }
+
+         @-webkit-keyframes fadeInLeft4 {
+            0% {
+               opacity: 0;
+               -webkit-transform: translateX(-620px);
+            }
+            100% {
+               opacity: 1;
+               -webkit-transform: translateX(-400px);
+            }
+         }
+
+         @keyframes fadeInLeft4 {
+            0% {
+               opacity: 0;
+               transform: translateX(-620px);
+            }
+            100% {
+               opacity: 1;
+               transform: translateX(-400px);
+            }
+         }
+         .fadeInLeft {
+         -webkit-animation-name: fadeInLeft;
+         animation-name: fadeInLeft;
+         }
+
+         .fadeInLeft2 {
+         -webkit-animation-name: fadeInLeft2;
+         animation-name: fadeInLeft2;
+         }
+         .fadeInLeft3 {
+         -webkit-animation-name: fadeInLeft3;
+         animation-name: fadeInLeft3;
+         }
+
+         .fadeInLeft4 {
+         -webkit-animation-name: fadeInLeft4;
+         animation-name: fadeInLeft4;
+         }
+
+         animation-name: fadeInDown;
